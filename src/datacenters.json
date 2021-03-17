@@ -1,0 +1,729 @@
+{
+  "title": "Property Details",
+  "type": "object",
+  "properties": {
+    "Physical Characteristics": {
+      "type": "object",
+      "title": "Physical Characteristics",
+      "properties": {
+        "Property Name": {
+          "type": "string",
+          "title": "Property Name: ",
+          "minLength": 4
+        },
+        "Client Name": {
+          "type": "string",
+          "title": "Client Name: ",
+          "minLength": 4
+        },
+        "Transaction Contact": {
+          "type": "string",
+          "title": "Transaction Contact: ",
+          "minLength": 4
+        },
+        "addresses": {
+          "type": "array",
+          "format": "grid",
+          "title": "Property Location(s)",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "title": "Location",
+            "format": "grid",
+            "properties": {
+              "Address": {
+                "type": "object",
+                "title": "Address",
+                "format": "grid",
+                "properties": {
+                  "Street Address": {
+                    "type": "string",
+                    "minLength": 2
+                  },
+                  "City": {
+                    "type": "string",
+                    "minLength": 2
+                  },
+                  "State": {
+                    "type": "string",
+                    "default": "N/A",
+                    "enum": [
+                      "N/A",
+                      "AL",
+                      "AK",
+                      "AZ",
+                      "AR",
+                      "CA",
+                      "CO",
+                      "CT",
+                      "DE",
+                      "FL",
+                      "GA",
+                      "HI",
+                      "ID",
+                      "IL",
+                      "IN",
+                      "IA",
+                      "KS",
+                      "KY",
+                      "LA",
+                      "ME",
+                      "MD",
+                      "MA",
+                      "MI",
+                      "MN",
+                      "MS",
+                      "MO",
+                      "MT",
+                      "NE",
+                      "NV",
+                      "NH",
+                      "NJ",
+                      "NM",
+                      "NY",
+                      "NC",
+                      "ND",
+                      "OH",
+                      "OK",
+                      "OR",
+                      "PA",
+                      "RI",
+                      "SC",
+                      "SD",
+                      "TN",
+                      "TX",
+                      "UT",
+                      "VT",
+                      "VA",
+                      "WA",
+                      "WV",
+                      "WI",
+                      "WY",
+                      "GU",
+                      "PR",
+                      "VI"
+                    ]
+                  },
+                  "Country": {
+                    "type": "string",
+                    "default": "United States",
+                    "enum": [
+                      "United States",
+                      "Afghanistan",
+                      "Albania",
+                      "Algeria",
+                      "Andorra",
+                      "Angola",
+                      "Antigua and Barbuda",
+                      "Argentina",
+                      "Armenia",
+                      "Aruba",
+                      "Australia",
+                      "Austria",
+                      "Azerbaijan",
+                      "Bahamas, The",
+                      "Bahrain",
+                      "Bangladesh",
+                      "Barbados",
+                      "Belarus",
+                      "Belgium",
+                      "Belize",
+                      "Benin",
+                      "Bhutan",
+                      "Bolivia",
+                      "Bosnia and Herzegovina",
+                      "Botswana",
+                      "Brazil",
+                      "Brunei ",
+                      "Bulgaria",
+                      "Burkina Faso",
+                      "Burma",
+                      "Burundi",
+                      "Cambodia",
+                      "Cameroon",
+                      "Canada",
+                      "Cabo Verde",
+                      "Central African Republic",
+                      "Chad",
+                      "Chile",
+                      "China",
+                      "Colombia",
+                      "Comoros",
+                      "Congo, Democratic Republic of the",
+                      "Congo, Republic of the",
+                      "Costa Rica",
+                      "Cote d'Ivoire",
+                      "Croatia",
+                      "Cuba",
+                      "Curacao",
+                      "Cyprus",
+                      "Czechia",
+                      "Denmark",
+                      "Djibouti",
+                      "Dominica",
+                      "Dominican Republic",
+                      "East Timor",
+                      "Ecuador",
+                      "Egypt",
+                      "El Salvador",
+                      "Equatorial Guinea",
+                      "Eritrea",
+                      "Estonia",
+                      "Ethiopia",
+                      "Fiji",
+                      "Finland",
+                      "France",
+                      "Gabon",
+                      "Gambia, The",
+                      "Georgia",
+                      "Germany",
+                      "Ghana",
+                      "Greece",
+                      "Grenada",
+                      "Guatemala",
+                      "Guinea",
+                      "Guinea-Bissau",
+                      "Guyana",
+                      "Haiti",
+                      "Honduras",
+                      "Hong Kong",
+                      "Hungary",
+                      "Iceland",
+                      "India",
+                      "Indonesia",
+                      "Iran",
+                      "Iraq",
+                      "Ireland",
+                      "Israel",
+                      "Italy",
+                      "Jamaica",
+                      "Japan",
+                      "Jordan",
+                      "Kazakhstan",
+                      "Kenya",
+                      "Kiribati",
+                      "Kosovo",
+                      "Kuwait",
+                      "Kyrgyzstan",
+                      "Laos",
+                      "Latvia",
+                      "Lebanon",
+                      "Lesotho",
+                      "Liberia",
+                      "Libya",
+                      "Liechtenstein",
+                      "Lithuania",
+                      "Luxembourg",
+                      "Macau",
+                      "Macedonia",
+                      "Madagascar",
+                      "Malawi",
+                      "Malaysia",
+                      "Maldives",
+                      "Mali",
+                      "Malta",
+                      "Marshall Islands",
+                      "Mauritania",
+                      "Mauritius",
+                      "Mexico",
+                      "Micronesia",
+                      "Moldova",
+                      "Monaco",
+                      "Mongolia",
+                      "Montenegro",
+                      "Morocco",
+                      "Mozambique",
+                      "Namibia",
+                      "Nauru",
+                      "Nepal",
+                      "Netherlands",
+                      "New Zealand",
+                      "Nicaragua",
+                      "Niger",
+                      "Nigeria",
+                      "North Korea",
+                      "Norway",
+                      "Oman",
+                      "Pakistan",
+                      "Palau",
+                      "Palestinian Territories",
+                      "Panama",
+                      "Papua New Guinea",
+                      "Paraguay",
+                      "Peru",
+                      "Philippines",
+                      "Poland",
+                      "Portugal",
+                      "Qatar",
+                      "Romania",
+                      "Russia",
+                      "Rwanda",
+                      "Saint Kitts and Nevis",
+                      "Saint Lucia",
+                      "Saint Vincent and the Grenadines",
+                      "Samoa ",
+                      "San Marino",
+                      "Sao Tome and Principe",
+                      "Saudi Arabia",
+                      "Senegal",
+                      "Serbia",
+                      "Seychelles",
+                      "Sierra Leone",
+                      "Singapore",
+                      "Sint Maarten",
+                      "Slovakia",
+                      "Slovenia",
+                      "Solomon Islands",
+                      "Somalia",
+                      "South Africa",
+                      "South Korea",
+                      "South Sudan",
+                      "Spain",
+                      "Sri Lanka",
+                      "Sudan",
+                      "Suriname",
+                      "Swaziland",
+                      "Sweden",
+                      "Switzerland",
+                      "Syria",
+                      "Taiwan",
+                      "Tajikistan",
+                      "Tanzania",
+                      "Thailand",
+                      "Togo",
+                      "Tonga",
+                      "Trinidad and Tobago",
+                      "Tunisia",
+                      "Turkey",
+                      "Turkmenistan",
+                      "Tuvalu",
+                      "Uganda",
+                      "Ukraine",
+                      "United Arab Emirates",
+                      "United Kingdom",
+                      "Uruguay",
+                      "Uzbekistan",
+                      "Vanuatu",
+                      "Venezuela",
+                      "Vietnam",
+                      "Yemen",
+                      "Zambia",
+                      "Zimbabwe "
+                    ]
+                  }
+                }
+              },
+              "facility type": {
+                "title": "Type of Facility: ",
+                "type": "string",
+                "enum": [
+                  "Tier 1",
+                  "Tier 2",
+                  "Tier 3",
+                  "Tier 4"
+                ]
+              },
+              "Primary Use": {
+                "title": "Primary Use: ",
+                "type": "string",
+                "enum": [
+                  "Use 1",
+                  "Use 2",
+                  "Use 3",
+                  "Use 4"
+                ]
+              },
+              "Number of Buildings": {
+                "type": "integer",
+                "default": 1,
+                "minimum": 1,
+                "maximum": 100
+              },
+              "Total Building SF": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 1000000
+              },
+              "Total Raised Floor SF": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "Total Critical IT load (kW)": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "Leased Critical IT load (kW)": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "Construction Type": {
+                "title": "Primary Use",
+                "type": "string",
+                "enum": [
+                  "Electrical Design",
+                  "Mechanical Design",
+                  "General Construction"
+                ]
+              },
+              "Years Built": {
+                "type": "array",
+                "format": "grid",
+                "title": "Year(s) Built",
+                "uniqueItems": true,
+                "items": {
+                  "type": "integer",
+                  "minimum": 1950,
+                  "maximum": 2050
+                }
+              },
+              "Years renovated": {
+                "type": "array",
+                "format": "tab",
+                "title": "Year(s) Renovated",
+                "uniqueItems": true,
+                "items": {
+                  "type": "integer",
+                  "minimum": 1950,
+                  "maximum": 2050
+                }
+              },
+              "Renovation comments": {
+                "type": "string",
+                "default": "Not applicable",
+                "minLength": 2,
+                "maxLength": 280
+              },
+              "Estimated leased land area (acres)": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000
+              }
+            }
+          }
+        }
+      }
+    },
+    "Ownership Info": {
+      "type": "object",
+      "title": "Ownership Information",
+      "properties": {
+        "Owner/Landlord": {
+          "type": "string",
+          "title": "Owner/Landlord: ",
+          "minLength": 4
+        },
+        "entity type": {
+          "title": "Type of Entity: ",
+          "type": "string",
+          "enum": [
+            "C-Corp",
+            "S-Corp",
+            "REIT",
+            "Other"
+          ]
+        }
+      }
+    },
+    "Transaction Info": {
+      "type": "object",
+      "title": "Transaction Information",
+      "properties": {
+        "Currency": {
+          "type": "string",
+          "title": "Currency: ",
+          "enum": [
+            "USD",
+            "GBP",
+            "EUR",
+            "CNY",
+            "JPY",
+            "AUD"
+          ]
+        },
+        "Market Rent": {
+          "type": "number",
+          "title": "Market Rent: ",
+          "minimum": 1,
+          "maximum": 1000000,
+          "description": "Average price per unit of measurement"
+        },
+        "Sale Price": {
+          "type": "number",
+          "title": "Sale Price: ",
+          "minimum": 1,
+          "maximum": 1000000000
+        },
+        "Sale Date": {
+          "type": "string",
+          "title": "Sale Date: ",
+          "default": "YYYY-MM-DD",
+          "minLength": 10,
+          "maxLength": 10
+        },
+        "Appraisal Value": {
+          "type": "number",
+          "title": "Appraisal Value: ",
+          "minimum": 1,
+          "maximum": 1000000000
+        },
+        "Appraisal Date": {
+          "type": "string",
+          "title": "Appraisal Date: ",
+          "default": "YYYY-MM-DD",
+          "minLength": 10,
+          "maxLength": 10
+        },
+        "Deal Structure": {
+          "type": "string",
+          "title": "Deal Structure: ",
+          "enum": [
+            "Cash Consideration",
+            "Stock as Consideration",
+            "Issuance of New Debt",
+            "Pre-existing Debt",
+            "Convertible Debt"
+          ]
+        },
+        "Transaction Type": {
+          "type": "string",
+          "title": "Transaction Type: ",
+          "enum": [
+            "Taxable",
+            "Non-taxable"
+          ]
+        },
+        "Cap Rate": {
+          "type": "number",
+          "title": "Cap Rate: ",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Number expressed as a percentage, e.g. 7.5% as 7.5"
+        },
+        "Notes": {
+          "type": "string",
+          "title": "Notes: "
+        }
+      }
+    },
+    "leases": {
+      "type": "array",
+      "format": "grid",
+      "title": "Leases",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "title": "Lease",
+        "format": "grid",
+        "properties": {
+          "Tenant": {
+            "type": "string",
+            "description": "Tenant/Leasee",
+            "minLength": 4
+          },
+          "Size": {
+            "type": "object",
+            "properties": {
+              "Unit of Measurement": {
+                "type": "string",
+                "enum": [
+                  "Square Foot",
+                  "Square Meter"
+                ]
+              },
+              "Space Leased": {
+                "type": "number",
+                "description": "Quantity of Space Leased",
+                "minimum": 10,
+                "maximum": 1000000
+              }
+            }
+          },
+          "Rent": {
+            "type": "object",
+            "properties": {
+              "Currency": {
+                "type": "string",
+                "enum": [
+                  "USD",
+                  "GBP",
+                  "EUR",
+                  "CNY",
+                  "JPY",
+                  "AUD"
+                ]
+              },
+              "Amount": {
+                "type": "number",
+                "description": "Monthly rent under the lease",
+                "minimum": 10,
+                "maximum": 1000000
+              }
+            }
+          },
+          "Lease Start Date": {
+            "type": "string",
+            "description": "Date the tenant's lease commenced",
+            "default": "YYYY-MM-DD",
+            "minLength": 10,
+            "maxLength": 10
+          },
+          "Lease End/Revision Date": {
+            "type": "string",
+            "description": "Date the tenant's lease is set to end or rent will reset",
+            "default": "YYYY-MM-DD",
+            "minLength": 10,
+            "maxLength": 10
+          },
+          "Termination Terms": {
+            "type": "string",
+            "enum": [
+              "Existing Break Clause",
+              "No Break Clause"
+            ]
+          },
+          "Percentage Data Center": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Number expressed as a percentage, e.g. 80% as 80"
+          }
+        }
+      }
+    },
+    "Operating Info": {
+      "type": "object",
+      "properties": {
+        "Property": {
+          "type": "array",
+          "format": "grid",
+          "title": "Operating Information",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "title": "Building",
+            "properties": {
+              "Building ID": {
+                "type": "string",
+                "description": "Building Identifier (Name, ID#, Address, etc.)"
+              },
+              "Currency": {
+                "type": "string",
+                "enum": [
+                  "USD",
+                  "GBP",
+                  "EUR",
+                  "CNY",
+                  "JPY",
+                  "AUD"
+                ]
+              },
+              "Year": {
+                "type": "integer",
+                "minimum": 1950,
+                "maximum": 2050
+              },
+              "Payroll": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1000000,
+                "description": "Payroll costs for the year"
+              },
+              "Repairs and Maintenance": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1000000,
+                "description": "Repairs and maintenance for the year"
+              },
+              "Property Taxes": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1000000,
+                "description": "Repairs and maintenance for the year"
+              },
+              "Utilities": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1000000,
+                "description": "Utility costs for the year"
+              },
+              "Property Insurance Cost": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1000000,
+                "description": "Property insurance costs for the year"
+              },
+              "Cleaning Cost": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1000000,
+                "description": "Cleaning costs for the year"
+              },
+              "Capex Cost": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1000000,
+                "description": "Capex for the year"
+              },
+              "Management Fee": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1000000,
+                "description": "Management Fee for the year"
+              }
+            }
+          }
+        },
+        "Research & Development Cost": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 1000000,
+          "description": "R&D for the year"
+        },
+        "Sales & Marketing Cost": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 1000000,
+          "description": "S&M for the year"
+        },
+        "Customer Information": {
+          "type": "object",
+          "properties": {
+            "Average Contract Period": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 120,
+              "description": "Average Length of Customer Contracts (Months)"
+            },
+            "Early Termination Details": {
+              "type": "string"
+            },
+            "Key Customer Exposure": {
+              "type": "array",
+              "format": "grid",
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "description": "Customers with over 20% revenue exposure",
+                "properties": {
+                  "Customer Name": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 100
+                  },
+                  "Customer Revenue Exposure Percentage": {
+                    "type": "number",
+                    "minimum": 20,
+                    "maximum": 100
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
